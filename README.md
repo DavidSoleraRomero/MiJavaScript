@@ -1,4 +1,4 @@
-# 🚀 Repositorio de Prácticas JavaScript de David Solera 🚀
+# 🚀 Repositorio de JavaScript de David Solera 🚀
 
 ¡Bienvenido a mi rincón de aprendizaje en JavaScript! En este repositorio personal, compartiré y documentaré mis prácticas mientras navego por el emocionante viaje de dominar JavaScript.
 
