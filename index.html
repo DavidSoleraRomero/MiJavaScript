@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas de JS</title>
+    <script type="text/javascript" src="./dom.js"></script>
+</head>
+<body>
+    <p>Mi primera clase práctica de DOM</p>
+    <script>
+        /*var parrafo = document.getElementById("parrafo"); */
+        var parrafo = document.getElementsByTagName("p");
+        parrafo[0].id = 'prueba_id';
+        parrafo[0].style.color = 'red';
+        parrafo[0].style.backgroundColor = 'blue';
+
+        console.log(parrafo.innerText);
+    </script>
+</body>
+</html>
