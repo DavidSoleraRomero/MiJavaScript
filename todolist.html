@@ -6,26 +6,46 @@
     <title>To Do List</title>
 </head>
 <body>
+    <h1>To Do List</h1>
+    <input type="text" id="toDoInput">
+    <button id="addTask">Agregar tarea</button>
     <ul id="to_do_list">
         
     </ul>
     <script>
         var todolist = document.querySelector('#to_do_list');
-        var tareas = ["Estudiar S.I.", "Leer Libro de Napoleon Hill", "Revisar web L.M.", "Tik Tok"];
+        var tareas = [];
+        function agregarTarea(tarea, id) {
+            var li = document.createElement('li');
+            li.textContent = tarea;
 
+            if (id)
+                li.id = id;
+
+            todolist.appendChild(li);
+        }
+        var boton = document.getElementById('addTask');
+        boton.addEventListener('click', function(evento) {
+            var input = document.getElementById('toDoInput').value;
+            agregarTarea(input);
+        })
         for (var i = 0; i < tareas.length; i+=1) {
+            var tarea = tareas[i];
+            agregarTarea(tarea, ('elemento_'+i));
+        }
+        /*for (var i = 0; i < tareas.length; i+=1) {
             var tarea = tareas[i];
             var li = document.createElement('li');
             li.textContent = tarea;
             li.id = 'elem' + i;
             todolist.appendChild(li);
         }
-
+        
         setTimeout(function() {
             var elementoEliminado = document.getElementById('elem2');
             todolist.removeChild(elementoEliminado);
-        }, 2000);
-        
+        }, 2000); */
+
     </script>
 </body>
 </html>

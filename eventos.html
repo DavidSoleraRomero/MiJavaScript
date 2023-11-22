@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <h1>Eventos</h1>
+    <button id="cambiarFondo">¡Presióname! Cambio el fondo</button>
+    <script type="text/javascript">
+        var boton = document.getElementById('cambiarFondo');
+        function random(numeroMaximo) {
+            return Math.round(Math.random() * numeroMaximo);
+        }
+        boton.addEventListener("click", function(evento) {
+            var colorRandom = [
+                random(255),
+                random(255),
+                random(255),
+            ];
+            document.body.style.backgroundColor = "rgb("+colorRandom[0]+","+colorRandom[1]+","+colorRandom[2]+")";
+        })
+
+        var event = new CustomEvent('cambiaFondo', {'detail': 'Hola Jhon'});
+        document.dispatchEvent(event);
+        document.addEventListener('cambiaFondo', function(evento) {
+            console.log(evento.detail);
+        })
+    </script>
+</body>
+</html>
