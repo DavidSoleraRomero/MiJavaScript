@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+</head>
+<body>
+    <h1>Expresiones regulares</h1>
+
+    <script>
+        var banda = "AC/DC";
+        /*var regExp = /\//g;
+        console.log(banda.search(regExp)); */
+        var texto = "Hola mundo";
+        var texto2 = "holi";
+
+        //var regExp2 = /^[a-z]$/g;
+        var regExp3 = /.$/;
+        var regExp4 = /hol./i;
+        
+        var texto3 = "bienvenidos";
+        var regExp5 = /s+$/;
+        
+        console.log(regExp3.test(texto));
+        console.log(texto2.search(regExp4));
+        console.log(texto3.search(regExp5));
+        var objeto = {
+    color: 'red',
+}
+
+console.log(objeto.size);
+    </script>
+</body>
+</html>
